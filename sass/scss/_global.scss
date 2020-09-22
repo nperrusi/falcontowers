@@ -1,0 +1,197 @@
+* { 
+    margin: 0;
+    padding: 0;
+}
+
+body  {
+    background-color: $bodyColorMd; 
+    
+    p {
+        margin-left: 50px;
+        padding-right: 30px;
+        @if $parrafoColor == plateado {
+            color: $textoColor;}
+        @else {
+            color: $tituloColor;}
+    }
+        
+    video {
+        width: 100%; 
+        height: auto;
+    }
+
+    .textos {
+        font-family: 'PT Sans regular 400', sans-serif;
+        font-size: ($medidaTexto/2)-4;
+        line-height: 30px;
+        letter-spacing: 1px;
+    }
+
+    ul li {
+      @extend.textos;
+      color: $textoColor;
+    }
+    
+    .titulo__principal {
+        color: $tituloColor;
+	    font-family: 'Alata', sans-serif;
+	    text-align: center;
+        margin-top: 40px;
+        margin-bottom: 60px;
+    }
+
+    .principales {
+        @extend.titulo__principal;
+        font-size: $medidaTexto;
+    }
+   
+    .subtitulo {
+        font-family: 'PT Sans bold 700', sans-serif;
+        font-size: $medidaTexto/2;
+        color: $subtituloColor;
+    }
+
+    .secundarios {
+        @extend.subtitulo;
+        font-size: $medidaTexto - 10;
+        margin-left: 25px;
+    }
+    
+    .fotos { 
+        width: 250px;
+        height: 150px;
+        grid-column-gap: 2px;
+        grid-row-gap: 2px;
+        margin: 2px;
+    }
+
+    .table-responsive {
+        width: 80%;
+    }
+
+    .menuPrincipal__logotipo--estilo {
+        width: $medidaLogo;
+        height: $medidaLogo;
+        margin: auto;
+        border-radius:150px;
+        border-color: $linkColor;
+        border-style: solid;
+        float: left;
+    }    
+    
+    .menuPrincipal__lista--estilo {
+        background-color: $navColor !important;
+    }
+    
+    .nav-item {
+        a {
+            color: $textoColor !important;
+        } 
+        
+            a:hover {
+                color: $linkColor !important;
+                border-top: 1px solid $linkColor;
+            }
+    }
+    
+    .bg-dark {
+        background-color: $navColor !important;
+    }
+    
+    .tarjetas {
+        background-color: $navColor;
+        font-family: 'PT Sans regular 400', sans-serif;
+        font-size: ($medidaTexto/2)-4;
+        color: $textoColor;
+    }
+    
+    .animate4 {
+        --animate-duration: 4s;
+    }
+    
+    .contenedorContacto {
+        margin: auto;
+        background-color: $navColor;
+    }
+    
+    .fontawesome {
+        font-size: ($medidaTexto/2)-4;
+        color: $textoColor;
+    }
+
+}
+
+#footerMd {
+    background-color: $navColor;
+    height: 70px;
+    padding: 5px;
+    border-top: 1px solid $textoColor;
+
+        a {
+            color: $textoColor;
+            text-decoration: none;
+        }
+    
+    .redes ul {
+        float: left;
+        margin-left: 10px;
+        list-style: none;
+    }
+        
+        i:hover, em:hover { 
+            color: $linkColor; 
+        }
+
+    .contactos ul {
+        float: right;
+        margin-right: 10px;
+        list-style: none;
+    }
+
+        li span:hover { 
+            color: $linkColor; 
+        }
+    
+    .ubicacion {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+            
+}
+
+#footerSm {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 20px;
+    
+        ul li { 
+            display: inline-block; 
+        }
+
+            a {
+                margin: 5px 20px;
+                padding-top: 10px;
+                color: $textoColor;
+                text-decoration: none;
+            }
+        
+                a:hover {
+                color: $linkColor;
+                
+                }
+
+}
+
+
+
+
+
+@media (max-width: 768px) {
+    body {
+        background-color: $bodyColorSm;
+    }
+}
