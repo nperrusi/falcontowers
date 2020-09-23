@@ -97,6 +97,10 @@ body  {
     .bg-dark {
         background-color: $navColor !important;
     }
+
+    .banner {
+        box-shadow: 20px 10px 10px $navColor;
+    }
     
     .tarjetas {
         background-color: $navColor;
